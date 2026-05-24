@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+
+    <div class="container">
+
+        <div class="form-section">
+
+            <h1>User Profile Card Generator</h1>
+
+            <p class="subtitle">
+                Create beautiful modern profile cards instantly.
+            </p>
+
+            <form id="profileForm">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label>Bio</label>
+                    <textarea id="bio" placeholder="Write your bio"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Image URL</label>
+                    <input type="text" id="image" placeholder="Paste image URL">
+                </div>
+
+                <button type="submit">
+                    Generate Profile
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="preview-section">
+
+            <div class="profile-card">
+
+                <img id="profileImage"
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+                <h2 id="profileName">Your Name</h2>
+
+                <p id="profileBio">
+                    Your bio will appear here after generating profile.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
